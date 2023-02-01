@@ -6,7 +6,7 @@ const Alert = ({ msg, type, removeAlert, List }) => {
       removeAlert();
     }, 3000);
     return () => clearInterval(lol);
-  }, [List]);
+  }, [List, removeAlert]);
   return <p className={`alert alert-${type}`}>{msg}</p>;
 };
 export default Alert;
